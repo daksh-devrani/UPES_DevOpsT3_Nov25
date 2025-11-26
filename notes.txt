@@ -1,0 +1,73 @@
+Securing and testing web Apps
+- malicious inputs
+- unauthorized access
+- insecure configurations
+- vulnerabilities in third-party libraries
+- attacks like XSS, CSRF, SQL injection
+
+As a DevOps engineer you are responsible for:
+1. CI/CD Pipeline - must block vulnerable builds
+2. Infrastructure - Must enforce security headers
+3. Monitoring - detect attacks
+4. Automation - run SAST/DAST SCA tools
+5. Deployment - configure WAF, security groups, IAM roles, load balancers
+
+
+XSS - Cross Site Scripting
+- It occurs when an attacker inject malicious JavaScript code into a web application
+
+How DevOps can help prevent XSS:
+1. Add CSP (Content security policy) headers
+2. Template escaping
+3. Disable inline JavaScript
+
+Nginx config
+add_header Content-Security-Policy "default-src 'self'; script-src 'self'
+
+
+CSP - Content Security Policy
+- CSP tells your browser where scripts, images, styles, fonts are allowed to be loaded from
+
+add_header Content-Security-Policy "default-src 'self'; img-src  https:; styles-src 'self'";
+
+
+Block inline scripts
+Limit 3rd party script injection
+Prevent XSS
+
+
+CSRF - Cross Site Request Forgery
+- Attackers tricks a user's browser into performing unwanted actions
+
+browser automatically sends victim cookies along with the forged request
+
+As a DevOps:
+1. Use anti-CSRF tokens
+2. SameSite cookies
+3. Only PUT/POST for critical operations
+
+
+Clickjacking Protection
+Attackers loads your site in an iframe and tricks users into clicking on invisible elements.
+
+IFrame Protection
+Prevent your site from being embedded in iframes on other domains to protect against clickjacking.
+
+
+Methods for authentication
+1. HTTP Basic Auth
+2. Token-Based Auth (JWT, OAuth)
+3. Multi-Factor Auth (MFA)
+
+Session & Cookie Security
+
+Identity Providers
+1. Okta
+2. Google OAuth
+3. Azure AD
+
+Being a DevoPS:
+- Configure SSO
+- Integrate OAuth or SAML with your web application to enable Single Sign-On (SSO) for users.
+- Apply role mapping
+

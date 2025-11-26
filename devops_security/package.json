@@ -1,0 +1,25 @@
+{
+  "name": "devops_security",
+  "version": "1.0.0",
+  "description": "",
+  "main": "xss_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.11.0",
+    "express": "^5.1.0",
+    "express-basic-auth": "^1.2.1",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
